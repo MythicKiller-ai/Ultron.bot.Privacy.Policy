@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultron™ Privacy Policy</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        background: #0b0b17;
+        color: #e0e0e0;
+        line-height: 1.6;
+    }
+
+    a { color: #00ffff; text-decoration: none; transition:0.2s; }
+    a:hover { text-decoration: underline; color:#ff00ff; }
+
+    /* Header */
+    header {
+        background: linear-gradient(90deg, #0f0f1f, #1c1c2e);
+        padding: 50px 20px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    }
+    header h1 {
+        font-size: 3rem;
+        font-weight: 900;
+        background: linear-gradient(90deg, #00ffff, #ff00ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: glow 2s infinite alternate;
+    }
+    header p { color:#a0a0a0; margin-top:10px; font-size:1.2rem; }
+
+    @keyframes glow {
+        from { text-shadow: 0 0 5px #00ffff, 0 0 10px #ff00ff; }
+        to { text-shadow: 0 0 20px #00ffff, 0 0 30px #ff00ff; }
+    }
+
+    /* Container */
+    .container { max-width: 1000px; margin: 40px auto; padding:0 20px; }
+
+    /* Cards */
+    .card {
+        background: linear-gradient(145deg, #1c1c2e, #121221);
+        padding: 30px;
+        margin-bottom: 25px;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+        transition: 0.3s transform, 0.3s box-shadow;
+        position: relative;
+        overflow: hidden;
+    }
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 35px rgba(0,0,0,0.9);
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        color: #00ffff;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+    }
+    h2 i { margin-right: 12px; color: #ff00ff; font-size:1.5rem; }
+
+    p, ul { margin-bottom: 15px; }
+    ul { margin-left: 20px; }
+    li { margin-bottom: 8px; }
+
+    .highlight { color:#00ffff; font-weight:bold; }
+
+    footer {
+        text-align:center;
+        padding:30px 0;
+        background:#0f0f1f;
+        border-top:1px solid #222;
+        color:#777;
+        font-size:0.95rem;
+        margin-top:40px;
+    }
+
+    /* Responsive */
+    @media(max-width:768px){
+        header h1 { font-size:2.2rem; }
+        .card { padding:20px; }
+        h2 { font-size:1.5rem; }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Ultron™ Privacy Policy</h1>
+    <p>Effective Date: 18 December 2025</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2><i class="fas fa-user-shield"></i> Introduction</h2>
+        <p>Welcome to <span class="highlight">Ultron™</span>. We respect your privacy and are committed to protecting your data while you interact with our Discord bot.</p>
+    </div>
+
+    <div class="card">
+        <h2><i class="fas fa-database"></i> Data Collection</h2>
+        <p>Ultron™ may collect the following information:</p>
+        <ul>
+            <li>Discord user ID and username</li>
+            <li>Server ID and channel info</li>
+            <li>Message content for features like AFK, economy, giveaways, logs</li>
+            <li>Bot usage statistics</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2><i class="fas fa-cogs"></i> Data Usage</h2>
+        <ul>
+            <li>Provide bot commands and features</li>
+            <li>Server moderation and logging</li>
+            <li>Track user stats, economy & games</li>
+            <li>Improve bot performance and features</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2><i class="fas fa-share-alt"></i> Data Sharing</h2>
+        <p>We do <span class="highlight">not sell</span> your data. Limited sharing occurs only for bot functionality like NQN, mass unban logs, or server logging.</p>
+    </div>
+
+    <div class="card">
+        <h2><i class="fas fa-lock"></i> Data Security</h2>
+        <p>We implement strong measures to protect your data. Users are responsible for managing permissions and shared data within their servers.</p>
+    </div>
+
+    <div class="card">
+        <h2><i class="fas fa-user-cog"></i> User Control</h2>
+        <p>You may:</p>
+        <ul>
+            <li>Opt out of certain bot features</li>
+            <li>Request deletion of server data by contacting the developer</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2><i class="fas fa-sync-alt"></i> Updates</h2>
+        <p>This Privacy Policy may be updated periodically. Continued use of Ultron™ indicates acceptance of changes.</p>
+    </div>
+
+    <div class="card">
+        <h2><i class="fas fa-envelope"></i> Contact</h2>
+        <p>Questions? Contact the Ultron™ developer via Discord or the official support server.</p>
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2025 Ultron™ | All Rights Reserved
+</footer>
+
+</body>
+</html>
