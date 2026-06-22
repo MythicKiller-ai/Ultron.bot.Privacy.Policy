@@ -1,167 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ultron™ Privacy Policy</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<style>
-    * { margin:0; padding:0; box-sizing:border-box; }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ultron™ – Privacy Policy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-        font-family: 'Roboto', sans-serif;
-        background: #0b0b17;
-        color: #e0e0e0;
-        line-height: 1.6;
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #07070d;
+            color: #eaeef2;
+            line-height: 1.7;
+        }
 
-    a { color: #00ffff; text-decoration: none; transition:0.2s; }
-    a:hover { text-decoration: underline; color:#ff00ff; }
+        a {
+            color: #00c8ff;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: #66dcff;
+        }
 
-    /* Header */
-    header {
-        background: linear-gradient(90deg, #0f0f1f, #1c1c2e);
-        padding: 50px 20px;
-        text-align: center;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-    }
-    header h1 {
-        font-size: 3rem;
-        font-weight: 900;
-        background: linear-gradient(90deg, #00ffff, #ff00ff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: glow 2s infinite alternate;
-    }
-    header p { color:#a0a0a0; margin-top:10px; font-size:1.2rem; }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
-    @keyframes glow {
-        from { text-shadow: 0 0 5px #00ffff, 0 0 10px #ff00ff; }
-        to { text-shadow: 0 0 20px #00ffff, 0 0 30px #ff00ff; }
-    }
+        /* ---------- COPYRIGHT BANNER (sticky popup) ---------- */
+        #copyrightBanner {
+            position: sticky;
+            top: 0;
+            z-index: 1001;
+            background: #0b0b1a;
+            border-bottom: 2px solid #00bfff;
+            padding: 10px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            transition: all 0.2s ease;
+        }
 
-    /* Container */
-    .container { max-width: 1000px; margin: 40px auto; padding:0 20px; }
+        #copyrightBanner .banner-text {
+            color: #b0c4de;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
 
-    /* Cards */
-    .card {
-        background: linear-gradient(145deg, #1c1c2e, #121221);
-        padding: 30px;
-        margin-bottom: 25px;
-        border-radius: 15px;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.7);
-        transition: 0.3s transform, 0.3s box-shadow;
-        position: relative;
-        overflow: hidden;
-    }
-    .card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 35px rgba(0,0,0,0.9);
-    }
+        #copyrightBanner .banner-text strong {
+            color: #00d4ff;
+        }
 
-    h2 {
-        font-size: 1.8rem;
-        color: #00ffff;
-        margin-bottom: 15px;
-        display: flex;
-        align-items: center;
-    }
-    h2 i { margin-right: 12px; color: #ff00ff; font-size:1.5rem; }
+        #copyrightBanner .close-btn {
+            background: transparent;
+            border: none;
+            color: #8899b0;
+            font-size: 1.6rem;
+            line-height: 1;
+            cursor: pointer;
+            padding: 0 6px;
+            transition: color 0.2s, transform 0.2s;
+        }
+        #copyrightBanner .close-btn:hover {
+            color: #ffffff;
+            transform: rotate(90deg);
+        }
 
-    p, ul { margin-bottom: 15px; }
-    ul { margin-left: 20px; }
-    li { margin-bottom: 8px; }
+        /* ---------- NAVBAR ---------- */
+        .navbar {
+            background: #0e0e1a;
+            border-bottom: 1px solid #1e1e32;
+            padding: 16px 0;
+            backdrop-filter: blur(6px);
+        }
 
-    .highlight { color:#00ffff; font-weight:bold; }
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
 
-    footer {
-        text-align:center;
-        padding:30px 0;
-        background:#0f0f1f;
-        border-top:1px solid #222;
-        color:#777;
-        font-size:0.95rem;
-        margin-top:40px;
-    }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-    /* Responsive */
-    @media(max-width:768px){
-        header h1 { font-size:2.2rem; }
-        .card { padding:20px; }
-        h2 { font-size:1.5rem; }
-    }
-</style>
+        .brand img {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2px solid #00bfff;
+            object-fit: cover;
+        }
+
+        .brand h1 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00bfff, #0080ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 24px;
+            list-style: none;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            color: #b0b8c5;
+            font-size: 1rem;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .nav-links a:hover {
+            color: #ffffff;
+            border-bottom-color: #00bfff;
+        }
+
+        /* ---------- HEADER ---------- */
+        .privacy-header {
+            text-align: center;
+            padding: 50px 20px 30px;
+            background: radial-gradient(circle at 20% 30%, #10102a, #07070d 70%);
+            border-bottom: 1px solid #18182a;
+        }
+
+        .privacy-header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00ccff, #0066ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .privacy-header p {
+            color: #8899b0;
+            font-size: 1.1rem;
+            margin-top: 8px;
+        }
+
+        /* ---------- MAIN CONTENT ---------- */
+        .privacy-content {
+            padding: 40px 0 60px;
+        }
+
+        .card {
+            background: #111125;
+            border-radius: 16px;
+            padding: 28px 30px;
+            margin-bottom: 24px;
+            border: 1px solid #1d1d3a;
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            border-color: #2a4a7a;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #00d4ff;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .card h2 i {
+            color: #ff44ff;
+            font-size: 1.4rem;
+            width: 2rem;
+        }
+
+        .card p {
+            color: #bcc6d6;
+            margin: 12px 0;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 12px 0;
+        }
+
+        .card ul li {
+            padding: 4px 0 4px 28px;
+            position: relative;
+            color: #bcc6d6;
+        }
+
+        .card ul li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #00bfff;
+        }
+
+        .highlight {
+            color: #00d4ff;
+            font-weight: 600;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #00bfff;
+            color: #0a0a12;
+            font-weight: 600;
+            padding: 12px 32px;
+            border-radius: 40px;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: #33ccff;
+            color: #0a0a12;
+            transform: scale(1.02);
+            box-shadow: 0 4px 16px rgba(0, 191, 255, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #00bfff;
+            border: 2px solid #00bfff;
+        }
+
+        .btn-outline:hover {
+            background: #00bfff;
+            color: #0a0a12;
+            box-shadow: 0 4px 16px rgba(0, 191, 255, 0.2);
+        }
+
+        .btn-sm {
+            padding: 6px 18px;
+            font-size: 0.8rem;
+        }
+
+        .cta-box {
+            background: #111125;
+            border-radius: 16px;
+            padding: 30px;
+            margin: 40px 0 20px;
+            text-align: center;
+            border: 1px solid #1d1d3a;
+        }
+
+        .cta-box p {
+            margin-bottom: 16px;
+        }
+
+        /* ---------- FOOTER ---------- */
+        .footer {
+            background: #0a0a16;
+            border-top: 1px solid #1a1a30;
+            padding: 32px 0 24px;
+            margin-top: 24px;
+            text-align: center;
+        }
+
+        .footer .links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer .copy {
+            color: #5a6a80;
+            font-size: 0.9rem;
+            letter-spacing: 0.3px;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 700px) {
+            .navbar .container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .nav-links {
+                justify-content: center;
+            }
+            .privacy-header h1 {
+                font-size: 2rem;
+            }
+            .card {
+                padding: 20px;
+            }
+            #copyrightBanner .banner-text {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brand h1 {
+                font-size: 1.3rem;
+            }
+            .btn {
+                padding: 10px 24px;
+                font-size: 0.9rem;
+            }
+            #copyrightBanner {
+                padding: 6px 16px;
+                flex-wrap: wrap;
+                gap: 4px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <h1>Ultron™ Privacy Policy</h1>
-    <p>Effective Date: 18 December 2025</p>
-</header>
-
-<div class="container">
-
-    <div class="card">
-        <h2><i class="fas fa-user-shield"></i> Introduction</h2>
-        <p>Welcome to <span class="highlight">Ultron™</span>. We respect your privacy and are committed to protecting your data while you interact with our Discord bot.</p>
+    <!-- ========== STICKY COPYRIGHT BANNER ========== -->
+    <div id="copyrightBanner">
+        <span class="banner-text">
+            <strong>© 2026 Ultron™</strong> · All rights reserved.
+        </span>
+        <button class="close-btn" id="closeBannerBtn" aria-label="Close banner">&times;</button>
     </div>
 
-    <div class="card">
-        <h2><i class="fas fa-database"></i> Data Collection</h2>
-        <p>Ultron™ may collect the following information:</p>
-        <ul>
-            <li>Discord user ID and username</li>
-            <li>Server ID and channel info</li>
-            <li>Message content for features like AFK, economy, giveaways, logs</li>
-            <li>Bot usage statistics</li>
-        </ul>
-    </div>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="brand">
+                <img src="https://cdn.discordapp.com/avatars/1450801405572153446/da7bf9a99800e445d4f15fe1743afe4c.png?size=1024" alt="Ultron bot icon" />
+                <h1>Ultron™</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="https://mythickiller-ai.github.io/Ultron.bot.website/">Home</a></li>
+                <li><a href="https://mythickiller-ai.github.io/Ultron.terms.services.xyz/">Terms</a></li>
+                <li><a href="https://discord.gg/bW9kNuqdft">Support</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <div class="card">
-        <h2><i class="fas fa-cogs"></i> Data Usage</h2>
-        <ul>
-            <li>Provide bot commands and features</li>
-            <li>Server moderation and logging</li>
-            <li>Track user stats, economy & games</li>
-            <li>Improve bot performance and features</li>
-        </ul>
-    </div>
+    <!-- ========== PRIVACY HEADER ========== -->
+    <section class="privacy-header">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>Effective as of January 1, 2026</p>
+        </div>
+    </section>
 
-    <div class="card">
-        <h2><i class="fas fa-share-alt"></i> Data Sharing</h2>
-        <p>We do <span class="highlight">not sell</span> your data. Limited sharing occurs only for bot functionality like NQN, mass unban logs, or server logging.</p>
-    </div>
+    <!-- ========== PRIVACY CONTENT ========== -->
+    <section class="privacy-content">
+        <div class="container">
 
-    <div class="card">
-        <h2><i class="fas fa-lock"></i> Data Security</h2>
-        <p>We implement strong measures to protect your data. Users are responsible for managing permissions and shared data within their servers.</p>
-    </div>
+            <div class="card">
+                <h2><i class="fas fa-user-shield"></i> Introduction</h2>
+                <p>Welcome to <span class="highlight">Ultron™</span>. We respect your privacy and are committed to protecting your data while you interact with our Discord bot. This Privacy Policy explains how we collect, use, and safeguard your information.</p>
+            </div>
 
-    <div class="card">
-        <h2><i class="fas fa-user-cog"></i> User Control</h2>
-        <p>You may:</p>
-        <ul>
-            <li>Opt out of certain bot features</li>
-            <li>Request deletion of server data by contacting the developer</li>
-        </ul>
-    </div>
+            <div class="card">
+                <h2><i class="fas fa-database"></i> Data Collection</h2>
+                <p>Ultron™ may collect the following information:</p>
+                <ul>
+                    <li>Discord user ID and username</li>
+                    <li>Server ID and channel information</li>
+                    <li>Message content for features like AFK, economy, giveaways, and moderation logs</li>
+                    <li>Bot usage statistics and command interactions</li>
+                </ul>
+            </div>
 
-    <div class="card">
-        <h2><i class="fas fa-sync-alt"></i> Updates</h2>
-        <p>This Privacy Policy may be updated periodically. Continued use of Ultron™ indicates acceptance of changes.</p>
-    </div>
+            <div class="card">
+                <h2><i class="fas fa-cogs"></i> Data Usage</h2>
+                <ul>
+                    <li>Provide bot commands and features</li>
+                    <li>Server moderation and logging</li>
+                    <li>Track user stats, economy balances, and game results</li>
+                    <li>Improve bot performance and develop new features</li>
+                </ul>
+            </div>
 
-    <div class="card">
-        <h2><i class="fas fa-envelope"></i> Contact</h2>
-        <p>Questions? Contact the Ultron™ developer via Discord or the official support server.</p>
-    </div>
+            <div class="card">
+                <h2><i class="fas fa-share-alt"></i> Data Sharing</h2>
+                <p>We do <span class="highlight">not sell</span> your data. Limited sharing occurs only for bot functionality (e.g., logging moderation actions, displaying leaderboards) and only within the server where the data was generated. No data is shared with third parties except as required by law.</p>
+            </div>
 
-</div>
+            <div class="card">
+                <h2><i class="fas fa-lock"></i> Data Security</h2>
+                <p>We implement strong measures to protect your data from unauthorised access, alteration, or destruction. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security. Users are responsible for managing permissions and shared data within their own servers.</p>
+            </div>
 
-<footer>
-    &copy; 2025 Ultron™ | All Rights Reserved
-</footer>
+            <div class="card">
+                <h2><i class="fas fa-user-cog"></i> User Control</h2>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Opt out of certain bot features (e.g., economy tracking, AFK) by not using those commands</li>
+                    <li>Request deletion of your server's data by contacting the developer</li>
+                    <li>Review the data we hold about you</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2><i class="fas fa-sync-alt"></i> Updates to This Policy</h2>
+                <p>This Privacy Policy may be updated periodically to reflect changes in our practices or legal requirements. We will notify users of any significant changes via our support server. Continued use of Ultron™ indicates acceptance of the updated policy.</p>
+            </div>
+
+            <div class="card">
+                <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+                <p>If you have any questions, concerns, or requests regarding your data or this policy, please contact the Ultron™ developer via our official support server:</p>
+                <div style="margin-top:16px;">
+                    <a href="https://discord.gg/bW9kNuqdft" target="_blank" class="btn">Join Support Server</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="links">
+                <a href="https://mythickiller-ai.github.io/Ultron.bot.Privacy.Policy/" target="_blank" class="btn btn-outline btn-sm">Privacy Policy</a>
+                <a href="https://mythickiller-ai.github.io/Ultron.terms.services.xyz/" target="_blank" class="btn btn-outline btn-sm">Terms of Service</a>
+                <a href="https://discord.gg/bW9kNuqdft" target="_blank" class="btn btn-outline btn-sm">Support</a>
+                <a href="https://mythickiller-ai.github.io/Mr.Mythic_killer/" target="_blank" class="btn btn-outline btn-sm">Developer</a>
+            </div>
+            <div class="copy">
+                &copy; 2026 Ultron™. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JAVASCRIPT FOR BANNER ========== -->
+    <script>
+        (function() {
+            const banner = document.getElementById('copyrightBanner');
+            const closeBtn = document.getElementById('closeBannerBtn');
+            const BANNER_KEY = 'ultronBannerClosed';
+
+            if (localStorage.getItem(BANNER_KEY) === 'true') {
+                banner.style.display = 'none';
+            }
+
+            closeBtn.addEventListener('click', function() {
+                banner.style.display = 'none';
+                localStorage.setItem(BANNER_KEY, 'true');
+            });
+        })();
+    </script>
 
 </body>
 </html>
